@@ -18,7 +18,7 @@ public class RayGun : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scoreText.text = "0";
+        scoreText.text = "Score: 0";
         scoreCanvas.SetActive(false);
     }
 
@@ -52,11 +52,11 @@ public class RayGun : MonoBehaviour
 
     void DisplayScore()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
         if(enemies <= 0)
         {
             scoreCanvas.SetActive(true);
-            highScoreText.text = score.ToString();
+            highScoreText.text = "High Score: " + score.ToString();
         }
     }
 }
